@@ -5,29 +5,29 @@
   "type": "object",
   "definitions": {
     "eigenvalue_band_properties": {
-          "description": "",
+          "description": "Properties optained from the band structure",
           "type": "object",
           "properties": {
             "band_gap": {
-              "description": "",
+              "description": "The difference between the cbm and vbm. Units: eV",
               "type": "number"
             },
             "cbm": {
-              "description": "",
+              "description": "Conduction band minimum. Units: eV",
               "type": "number"
             },
             "vbm": {
-              "description": "",
+              "description": "Valence band maximum. Units: eV",
               "type": "number"
             },
             "is_band_gap_direct": {
-              "description": "",
+              "description": "Specifies whether the band gap is direct or indirect.",
               "type": "boolean"
             }
           }
         },
     "orbital_band_centers": {
-          "description": "",
+          "description": "The energy of the center of the s, p, d, and f orbital bands. Units: eV",
           "type": "object",
           "properties": {
             "s": {
@@ -72,12 +72,12 @@
       "$ref": "https://raw.githubusercontent.com/D3TaLES/schema/main/schema_frontend/conditions/periodic_dft.schema.json"
     },
     "task_name": {
-      "description": "",
+      "description": "Description of the system studied and the type of calculation performed.",
       "type": "string"
 
     },
     "adsorbate": {
-      "description": "",
+      "description": "Atom or molecule adsorbing to the surface.",
       "type": "object",
       "properties": {
         "@module": {"type":  "string"},
@@ -98,33 +98,33 @@
 
     },
     "bulk": {
-      "description": "",
+      "description": "Name of the bulk material.",
       "type": "object",
       "properties": {
         "formula": {
-          "description": "",
+          "description": "Formula describing the composition of the bulk material.",
           "type": "string"
         },
         "directory": {
-          "description": "",
+          "description": "Directory in which the calculation took place.",
           "type": "string"
         },
         "converged": {
-          "description": "",
+          "description": "Whether or not the calculation succesfully converged.",
           "type": "boolean"
         },
         "input_structure": {
-          "description": "",
+          "description": "Coordinates of the input structure.",
           "type": "object" ,
           "$ref": "https://raw.githubusercontent.com/D3TaLES/schema/main/schema_frontend/species_characterization.crystal.schema.json"
         },
         "output_structure": {
-          "description": "",
+          "description": "Coordinates of the output structure.",
           "type": "object" ,
           "$ref": "https://raw.githubusercontent.com/D3TaLES/schema/main/schema_frontend/species_characterization.crystal.schema.json"
         },
         "output_energy": {
-          "description": "",
+          "description": "Energy of the output structure. Units: eV",
           "type": "number"
         },
         "eigenvalue_band_properties": {
